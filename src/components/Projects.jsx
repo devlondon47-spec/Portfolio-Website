@@ -100,6 +100,18 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.div 
+          className="view-all-wrapper"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          <a href="https://github.com/devlondon47-spec?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            View All Projects on GitHub
+          </a>
+        </motion.div>
       </div>
 
       {/* Case Study Modal */}
@@ -161,6 +173,12 @@ const Projects = () => {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
           gap: 2.5rem;
+          margin-bottom: 4rem;
+        }
+        
+        .view-all-wrapper {
+          display: flex;
+          justify-content: center;
         }
         
         .project-card {

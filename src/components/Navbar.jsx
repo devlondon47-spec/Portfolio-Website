@@ -23,39 +23,56 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled glass' : ''}`}>
-      <div className="container nav-content">
-        <motion.a 
-          href="#" 
-          className="logo"
-          whileHover={{ scale: 1.05 }}
-        >
-          <Terminal size={24} className="primary-icon" />
-          <span>Ansh Patel</span>
-        </motion.a>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <motion.div 
+        className="container nav-container"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div className="nav-content">
+          <motion.a 
+            href="#" 
+            className="logo"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Terminal size={24} className="primary-icon" />
+            <span>Ansh Patel</span>
+          </motion.a>
 
-        {/* Desktop Nav */}
-        <ul className="nav-links">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a href={link.href}>{link.name}</a>
-            </li>
-          ))}
-          <button onClick={toggleTheme} className="theme-toggle">
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-        </ul>
+          {/* Desktop Nav */}
+          <ul className="nav-links">
+            {navLinks.map((link, i) => (
+              <motion.li 
+                key={link.name}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * i + 0.5 }}
+              >
+                <a href={link.href} className="nav-link-item">{link.name}</a>
+              </motion.li>
+            ))}
+            <motion.button 
+              onClick={toggleTheme} 
+              className="theme-toggle"
+              whileHover={{ scale: 1.1, rotate: 15 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </motion.button>
+          </ul>
 
-        {/* Mobile Nav Toggle */}
-        <div className="mobile-actions">
-          <button onClick={toggleTheme} className="theme-toggle">
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-          <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Nav Toggle */}
+          <div className="mobile-actions">
+            <button onClick={toggleTheme} className="theme-toggle">
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </button>
+            <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -83,11 +100,29 @@ const Navbar = () => {
           width: 100%;
           z-index: 1000;
           padding: 1.5rem 0;
-          transition: all var(--transition-fast);
+          transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
+        .nav-container {
+          padding: 0.75rem 2rem;
+          transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+          background: transparent;
+          border: 1px solid transparent;
+          border-radius: 0;
+        }
+
         .navbar.scrolled {
-          padding: 1rem 0;
+          padding: 1.25rem 0;
+        }
+        
+        .navbar.scrolled .nav-container {
+          max-width: 900px;
+          border-radius: 5rem;
+          background: var(--glass-bg);
+          border-color: var(--border);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
         }
         
         .nav-content {
@@ -102,7 +137,7 @@ const Navbar = () => {
           gap: 0.5rem;
           font-family: var(--font-heading);
           font-weight: 800;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           color: var(--text);
         }
         
@@ -111,21 +146,38 @@ const Navbar = () => {
         .nav-links {
           display: flex;
           align-items: center;
-          gap: 2.5rem;
+          gap: 2rem;
         }
         
-        .nav-links a {
-          font-weight: 500;
+        .nav-link-item {
+          font-weight: 600;
           color: var(--text-muted);
           position: relative;
+          font-size: 0.9375rem;
+          transition: color 0.3s ease;
         }
         
-        .nav-links a:hover {
+        .nav-link-item:hover {
           color: var(--primary);
+        }
+
+        .nav-link-item::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--primary);
+          transition: width 0.3s ease;
+        }
+
+        .nav-link-item:hover::after {
+          width: 100%;
         }
         
         .theme-toggle {
-          padding: 0.5rem;
+          padding: 0.6rem;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -133,6 +185,7 @@ const Navbar = () => {
           background: var(--surface);
           color: var(--text);
           box-shadow: var(--card-shadow);
+          border: 1px solid var(--border);
         }
         
         .mobile-actions {
@@ -147,16 +200,28 @@ const Navbar = () => {
         .mobile-menu {
           position: absolute;
           top: 100%;
-          left: 0;
-          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: calc(100% - 4rem);
+          max-width: 500px;
+          margin-top: 1rem;
           padding: 2rem;
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
           text-align: center;
-          border-top: 1px solid var(--border);
+          border-radius: 2rem;
+          border: 1px solid var(--border);
+          background: var(--glass-bg);
+          backdrop-filter: blur(12px);
         }
         
+        @media (max-width: 992px) {
+           .navbar.scrolled .nav-container {
+             max-width: calc(100% - 2rem);
+           }
+        }
+
         @media (max-width: 768px) {
           .nav-links { display: none; }
           .mobile-actions { display: flex; }

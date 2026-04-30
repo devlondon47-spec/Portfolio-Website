@@ -67,7 +67,9 @@ const Blog = () => {
         </div>
         
         <div className="blog-footer">
-          <button className="btn btn-secondary">View All Posts</button>
+          <a href="https://github.com/devlondon47-spec?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            View All Posts
+          </a>
         </div>
       </div>
 
