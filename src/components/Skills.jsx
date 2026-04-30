@@ -3,36 +3,36 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
+      title: 'MERN Stack Development',
       skills: [
-        { name: 'React / Next.js', level: 95 },
-        { name: 'JavaScript (ES6+)', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'HTML5 / CSS3', level: 98 },
-        { name: 'Framer Motion', level: 80 },
+        { name: 'React.js', level: 95 },
+        { name: 'Node.js / Express', level: 90 },
+        { name: 'MongoDB', level: 88 },
+        { name: 'JavaScript (ES6+)', level: 92 },
+        { name: 'RESTful APIs', level: 90 },
         { name: 'Tailwind CSS', level: 95 },
       ]
     },
     {
-      title: 'Backend & Database',
+      title: 'AI & Machine Learning',
       skills: [
-        { name: 'Node.js / Express', level: 88 },
-        { name: 'Python / Django', level: 75 },
-        { name: 'PostgreSQL', level: 82 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'REST / GraphQL', level: 90 },
-        { name: 'Redis', level: 70 },
+        { name: 'Python', level: 85 },
+        { name: 'Data Analysis (Pandas/NumPy)', level: 80 },
+        { name: 'Predictive Modeling', level: 75 },
+        { name: 'Neural Networks', level: 70 },
+        { name: 'Scikit-Learn', level: 78 },
+        { name: 'Online Learning (Continuous)', level: 100 },
       ]
     },
     {
-      title: 'Tools & DevOps',
+      title: 'Tools & Version Control',
       skills: [
         { name: 'Git / GitHub', level: 95 },
-        { name: 'Docker / Kubernetes', level: 65 },
-        { name: 'AWS / GCP', level: 78 },
-        { name: 'CI/CD Pipelines', level: 80 },
-        { name: 'Linux / Bash', level: 85 },
-        { name: 'Jest / Testing', level: 75 },
+        { name: 'VS Code', level: 98 },
+        { name: 'Docker (Basics)', level: 60 },
+        { name: 'Postman', level: 90 },
+        { name: 'Figma (Design)', level: 75 },
+        { name: 'Vercel / Netlify', level: 85 },
       ]
     }
   ];

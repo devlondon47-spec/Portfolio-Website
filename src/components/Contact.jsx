@@ -52,7 +52,7 @@ const Contact = () => {
                 <div className="method-icon"><Mail size={20} /></div>
                 <div>
                   <h4>Email</h4>
-                  <p>hello@johndoe.com</p>
+                  <p>anshpatel8780@gmail.com</p>
                 </div>
               </div>
               <div className="method">
@@ -87,11 +87,11 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
                 <label>Full Name</label>
-                <input type="text" name="name" placeholder="John Doe" required />
+                <input type="text" name="name" placeholder="Ansh" required />
               </div>
               <div className="form-group">
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="john@example.com" required />
+                <input type="email" name="email" placeholder="ansh@example.com" required />
               </div>
               <div className="form-group">
                 <label>Subject</label>

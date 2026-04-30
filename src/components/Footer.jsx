@@ -30,7 +30,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <div className="container">
-          <p>© {new Date().getFullYear()} Ansh. Made with <Heart size={14} className="heart-icon" /> and React.</p>
+          <p>© {new Date().getFullYear()} Ansh Patel. Made with <Heart size={14} className="heart-icon" /> and React.</p>
         </div>
       </div>
 

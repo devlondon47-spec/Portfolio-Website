@@ -6,7 +6,7 @@ const About = () => {
     { icon: <Code size={20} />, label: 'Experience', value: 'Freshman' },
     { icon: <Briefcase size={20} />, label: 'Projects', value: '10+' },
     { icon: <User size={20} />, label: 'Learning', value: 'Continuous' },
-    { icon: <GraduationCap size={20} />, label: 'Education', value: 'B.Tech/B.E.' },
+    { icon: <GraduationCap size={20} />, label: 'Education', value: 'BCA' },
   ];
 
   return (

@@ -80,7 +80,7 @@ const Hero = () => {
         >
           <div className="blob-bg"></div>
           <div className="image-wrapper">
-             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="John Doe" />
+             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="Ansh" />
           </div>
         </motion.div>
       </div>
