@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Download } from 'lucide-react';
 import { Github, Linkedin } from './SocialIcons';
 
-const Hero = ({ onOpenResume }) => {
+const Hero = () => {
   return (
     <section className="hero">
       <div className="container hero-content">
