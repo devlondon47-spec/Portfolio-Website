@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer-brand">
           <div className="logo">
             <Terminal size={24} className="primary-icon" />
-            <span>DevPortfolio</span>
+            <span>Ansh Patel</span>
           </div>
           <p>Building the future of the web, one pixel at a time.</p>
         </div>
@@ -21,9 +21,8 @@ const Footer = () => {
           </div>
           <div className="link-group">
             <h4>Social</h4>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <a href="https://github.com/devlondon47-spec" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/dev-london-a09416394" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </div>

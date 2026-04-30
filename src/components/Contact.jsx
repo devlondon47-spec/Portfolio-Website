@@ -72,9 +72,8 @@ const Contact = () => {
             </div>
 
             <div className="social-links">
-              <a href="#" className="glass"><Github size={20} /></a>
-              <a href="#" className="glass"><Linkedin size={20} /></a>
-              <a href="#" className="glass"><Twitter size={20} /></a>
+              <a href="https://github.com/devlondon47-spec" target="_blank" rel="noopener noreferrer" className="glass"><Github size={20} /></a>
+              <a href="https://www.linkedin.com/in/dev-london-a09416394" target="_blank" rel="noopener noreferrer" className="glass"><Linkedin size={20} /></a>
             </div>
           </motion.div>
 

@@ -31,7 +31,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
         >
           <Terminal size={24} className="primary-icon" />
-          <span>DevPortfolio</span>
+          <span>Ansh Patel</span>
         </motion.a>
 
         {/* Desktop Nav */}

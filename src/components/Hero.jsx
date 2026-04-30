@@ -58,6 +58,9 @@ const Hero = () => {
             <a href="#contact" className="btn btn-secondary">
               Contact Me
             </a>
+            <a href="/Ansh_Patel_Portfolio.pdf" download className="btn btn-glass">
+              <Download size={18} /> Download Portfolio
+            </a>
           </motion.div>
 
           <motion.div 
@@ -66,9 +69,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <a href="#" className="social-icon"><Github size={20} /></a>
-            <a href="#" className="social-icon"><Linkedin size={20} /></a>
-            <a href="#" className="social-icon"><Download size={20} /></a>
+            <a href="https://github.com/devlondon47-spec" target="_blank" rel="noopener noreferrer" className="social-icon"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/dev-london-a09416394" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={20} /></a>
+            <a href="/Ansh_Patel_Portfolio.pdf" download className="social-icon"><Download size={20} /></a>
           </motion.div>
         </motion.div>
 
@@ -168,6 +171,18 @@ const Hero = () => {
         
         .btn-secondary:hover {
           background: var(--border);
+        }
+        
+        .btn-glass {
+          background: rgba(255, 255, 255, 0.05);
+          color: var(--text);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+        }
+        
+        .btn-glass:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: var(--primary);
         }
         
         .hero-socials {
