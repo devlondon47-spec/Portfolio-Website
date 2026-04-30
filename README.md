@@ -1,16 +1,28 @@
-# React + Vite
+# Professional Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, responsive portfolio built with React + Vite + Framer Motion.
 
-Currently, two official plugins are available:
+## 🚀 How to Go Live
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Your project is already configured for **GitHub Pages**. Follow these 2 simple steps:
 
-## React Compiler
+### Step 1: Push your changes
+Since I am an AI, I cannot log in to your GitHub account for you. Please run this command in your VS Code terminal:
+```bash
+git push -u origin master
+```
+*If a window pops up asking you to sign in, please do so!*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Step 2: Enable GitHub Actions Deployment
+1. Go to your repo settings: [Portfolio-Website Settings](https://github.com/devlondon47-spec/Portfolio-Website/settings/pages)
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
 
-## Expanding the ESLint configuration
+That's it! Your site will be live at:
+`https://devlondon47-spec.github.io/Portfolio-Website/`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+- Dark/Light Mode
+- Glassmorphism UI
+- Responsive Design
+- Framer Motion Animations
+- Contact Form (Web3Forms)
