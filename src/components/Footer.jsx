@@ -1,6 +1,6 @@
 import { Terminal, Heart } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ onOpenResume }) => {
   return (
     <footer className="footer">
       <div className="container footer-content">
@@ -18,6 +18,7 @@ const Footer = () => {
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#blog">Blog</a>
+            <button onClick={onOpenResume} className="footer-resume-btn">Resume</button>
           </div>
           <div className="link-group">
             <h4>Social</h4>
@@ -73,12 +74,18 @@ const Footer = () => {
           gap: 0.75rem;
         }
         
-        .link-group a {
+        .link-group a, .footer-resume-btn {
           color: var(--text-muted);
           font-size: 0.9375rem;
+          background: none;
+          border: none;
+          padding: 0;
+          text-align: left;
+          cursor: pointer;
+          font-family: inherit;
         }
         
-        .link-group a:hover {
+        .link-group a:hover, .footer-resume-btn:hover {
           color: var(--primary);
         }
         

@@ -3,7 +3,7 @@ import { useTheme } from '../hooks/useTheme';
 import { Sun, Moon, Menu, X, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
+const Navbar = ({ onOpenResume }) => {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -52,6 +52,13 @@ const Navbar = () => {
                 <a href={link.href} className="nav-link-item">{link.name}</a>
               </motion.li>
             ))}
+            <motion.li
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * navLinks.length + 0.5 }}
+            >
+              <button onClick={onOpenResume} className="nav-link-item resume-link-btn">Resume</button>
+            </motion.li>
             <motion.button 
               onClick={toggleTheme} 
               className="theme-toggle"
@@ -88,6 +95,9 @@ const Navbar = () => {
                 <a href={link.href} onClick={() => setIsOpen(false)}>{link.name}</a>
               </li>
             ))}
+            <li>
+              <button onClick={() => { onOpenResume(); setIsOpen(false); }} className="nav-link-item resume-link-btn">Resume</button>
+            </li>
           </motion.ul>
         )}
       </AnimatePresence>
@@ -225,6 +235,14 @@ const Navbar = () => {
         @media (max-width: 768px) {
           .nav-links { display: none; }
           .mobile-actions { display: flex; }
+        }
+
+        .resume-link-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-family: inherit;
+          padding: 0;
         }
       `}} />
     </nav>

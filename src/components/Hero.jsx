@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Download } from 'lucide-react';
 import { Github, Linkedin } from './SocialIcons';
 
-const Hero = () => {
+const Hero = ({ onOpenResume }) => {
   return (
     <section className="hero">
       <div className="container hero-content">
@@ -58,9 +58,9 @@ const Hero = () => {
             <a href="#contact" className="btn btn-secondary">
               Contact Me
             </a>
-            <a href="/Ansh_Patel_Portfolio.pdf" download className="btn btn-glass">
+            <button onClick={onOpenResume} className="btn btn-glass">
               <Download size={18} /> Download Portfolio
-            </a>
+            </button>
           </motion.div>
 
           <motion.div 
@@ -71,7 +71,7 @@ const Hero = () => {
           >
             <a href="https://github.com/devlondon47-spec" target="_blank" rel="noopener noreferrer" className="social-icon"><Github size={20} /></a>
             <a href="https://www.linkedin.com/in/dev-london-a09416394" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={20} /></a>
-            <a href="/Ansh_Patel_Portfolio.pdf" download className="social-icon"><Download size={20} /></a>
+            <button onClick={onOpenResume} className="social-icon" style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}><Download size={20} /></button>
           </motion.div>
         </motion.div>
 
