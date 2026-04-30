@@ -47,15 +47,30 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Featured Projects</h2>
         
-        <div className="projects-grid">
-          {projects.map((project, idx) => (
+        <motion.div 
+          className="projects-grid"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          {projects.map((project) => (
             <motion.div 
               key={project.id}
               className="project-card glass"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                show: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ y: -15, transition: { duration: 0.3 } }}
             >
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
@@ -84,7 +99,7 @@ const Projects = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Case Study Modal */}

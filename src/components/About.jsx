@@ -34,15 +34,37 @@ const About = () => {
               I am currently seeking opportunities where I can apply my MERN expertise while continuing to grow in the AI/ML space. Let's build something intelligent together!
             </p>
             
-            <div className="stats-grid">
+            <motion.div 
+              className="stats-grid"
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.1
+                  }
+                }
+              }}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               {stats.map((stat, i) => (
-                <div key={i} className="stat-card glass">
+                <motion.div 
+                  key={i} 
+                  className="stat-card glass"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8 },
+                    show: { opacity: 1, scale: 1 }
+                  }}
+                  whileHover={{ y: -10, transition: { duration: 0.2 } }}
+                >
                   <div className="stat-icon">{stat.icon}</div>
                   <div className="stat-value">{stat.value}</div>
                   <div className="stat-label">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div 

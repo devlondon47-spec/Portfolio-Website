@@ -76,10 +76,10 @@ const Hero = () => {
           className="hero-image"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="blob-bg"></div>
-          <div className="image-wrapper">
+          <div className="image-wrapper floating">
              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="Ansh" />
           </div>
         </motion.div>

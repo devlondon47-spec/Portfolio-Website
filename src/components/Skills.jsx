@@ -42,39 +42,53 @@ const Skills = () => {
       <div className="container">
         <h2 className="section-title">My Expertise</h2>
         
-        <div className="skills-grid">
-          {skillCategories.map((category, idx) => (
+        <motion.div 
+          className="skills-grid"
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          {skillCategories.map((category) => (
             <motion.div 
-              key={idx}
-              className="skill-category glass"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              key={category.title} 
+              className="skill-category glass glass-glow"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 }
+              }}
             >
               <h3>{category.title}</h3>
-              <div className="skill-items">
-                {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="skill-item">
+              <div className="skills-list">
+                {category.skills.map((skill) => (
+                  <div key={skill.name} className="skill-item">
                     <div className="skill-info">
                       <span>{skill.name}</span>
                       <span>{skill.level}%</span>
                     </div>
-                    <div className="skill-bar-bg">
+                    <div className="skill-bar">
                       <motion.div 
-                        className="skill-bar-fill"
+                        className="skill-progress"
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, delay: 0.5 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 + (sIdx * 0.1) }}
-                      />
+                      ></motion.div>
                     </div>
                   </div>
                 ))}
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
@@ -99,7 +113,7 @@ const Skills = () => {
           color: var(--primary);
         }
         
-        .skill-items {
+        .skills-list {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
@@ -113,7 +127,7 @@ const Skills = () => {
           font-size: 0.9375rem;
         }
         
-        .skill-bar-bg {
+        .skill-bar {
           width: 100%;
           height: 8px;
           background: var(--border);
@@ -121,7 +135,7 @@ const Skills = () => {
           overflow: hidden;
         }
         
-        .skill-bar-fill {
+        .skill-progress {
           height: 100%;
           background: var(--primary);
           border-radius: 4px;
