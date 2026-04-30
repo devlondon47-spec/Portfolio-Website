@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Github, Linkedin, Twitter } from './SocialIcons';
+import { Github, Linkedin } from './SocialIcons';
 
 const Contact = () => {
   const [formState, setFormState] = useState('idle'); // idle, loading, success, error
