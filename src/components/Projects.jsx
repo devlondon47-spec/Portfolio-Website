@@ -9,14 +9,14 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'NexGen E-Commerce',
-      description: 'A full-scale headless commerce solution with real-time inventory and global payments.',
-      problem: 'Existing e-commerce platforms were slow, hard to customize, and had high transaction fees for global sellers.',
-      solution: 'Built a custom headless architecture using Next.js and Stripe, resulting in 40% faster load times and 15% lower operational costs.',
-      tech: ['React', 'Next.js', 'Node.js', 'Stripe', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=600',
+      title: 'Kairo Jewels',
+      description: 'A premium jewelry e-commerce platform focused on luxury user experiences and visual excellence.',
+      problem: 'Traditional jewelry shopping lacked the interactive, premium feel of in-person stores, making it hard to showcase intricate details online.',
+      solution: 'Developed a high-end commerce solution with a focus on performance and visual storytelling, resulting in a 50% increase in user engagement.',
+      tech: ['React', 'Next.js', 'Tailwind', 'Vercel', 'E-commerce'],
+      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600',
       github: '#',
-      live: '#',
+      live: 'https://kairojewels.vercel.app',
     },
     {
       id: 2,
