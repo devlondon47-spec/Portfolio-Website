@@ -1,6 +1,6 @@
 import { Terminal, Heart } from 'lucide-react';
 
-const Footer = ({ onOpenResume }) => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-content">
@@ -18,7 +18,7 @@ const Footer = ({ onOpenResume }) => {
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#blog">Blog</a>
-            <button onClick={onOpenResume} className="footer-resume-btn">Resume</button>
+            <a href="./Ansh_Patel_Resume.html" target="_blank" className="footer-resume-link">Resume</a>
           </div>
           <div className="link-group">
             <h4>Social</h4>

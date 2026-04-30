@@ -3,7 +3,7 @@ import { useTheme } from '../hooks/useTheme';
 import { Sun, Moon, Menu, X, Terminal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = ({ onOpenResume }) => {
+const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -57,7 +57,7 @@ const Navbar = ({ onOpenResume }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * navLinks.length + 0.5 }}
             >
-              <button onClick={onOpenResume} className="nav-link-item resume-link-btn">Resume</button>
+              <a href="./Ansh_Patel_Resume.html" target="_blank" className="nav-link-item">Resume</a>
             </motion.li>
             <motion.button 
               onClick={toggleTheme} 
@@ -96,7 +96,7 @@ const Navbar = ({ onOpenResume }) => {
               </li>
             ))}
             <li>
-              <button onClick={() => { onOpenResume(); setIsOpen(false); }} className="nav-link-item resume-link-btn">Resume</button>
+              <a href="./Ansh_Patel_Resume.html" target="_blank" onClick={() => setIsOpen(false)} className="nav-link-item">Resume</a>
             </li>
           </motion.ul>
         )}

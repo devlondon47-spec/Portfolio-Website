@@ -58,9 +58,9 @@ const Hero = ({ onOpenResume }) => {
             <a href="#contact" className="btn btn-secondary">
               Contact Me
             </a>
-            <button onClick={onOpenResume} className="btn btn-glass">
+            <a href="./Ansh_Patel_Resume.html" target="_blank" className="btn btn-glass">
               <Download size={18} /> Download Portfolio
-            </button>
+            </a>
           </motion.div>
 
           <motion.div 
@@ -71,7 +71,7 @@ const Hero = ({ onOpenResume }) => {
           >
             <a href="https://github.com/devlondon47-spec" target="_blank" rel="noopener noreferrer" className="social-icon"><Github size={20} /></a>
             <a href="https://www.linkedin.com/in/dev-london-a09416394" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={20} /></a>
-            <button onClick={onOpenResume} className="social-icon" style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}><Download size={20} /></button>
+            <a href="./Ansh_Patel_Resume.html" target="_blank" className="social-icon"><Download size={20} /></a>
           </motion.div>
         </motion.div>
 
