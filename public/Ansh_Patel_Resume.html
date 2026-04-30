@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh Patel - Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #f1f5f9;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .role {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 50px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: var(--text);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .profile-p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group h4 {
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .skill-group p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .exp-item, .edu-item {
+            margin-bottom: 20px;
+        }
+
+        .exp-item h4, .edu-item h4 {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .date {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .portfolio-link {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        @media print {
+            body { padding: 0; background: white; }
+            .resume-container { box-shadow: none; border-radius: 0; width: 100%; max-width: none; padding: 40px; }
+            .no-print { display: none; }
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:window.print()" class="download-btn no-print">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Save as PDF
+    </a>
+
+    <div class="resume-container">
+        <header>
+            <h1>ANSH PATEL</h1>
+            <div class="role">MERN Stack Developer & AI/ML Enthusiast</div>
+            <div class="contact-info">
+                <a href="mailto:anshpatel8780@gmail.com">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    anshpatel8780@gmail.com
+                </a>
+                <a href="https://github.com/devlondon47-spec">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    github.com/devlondon47-spec
+                </a>
+                <a href="https://www.linkedin.com/in/dev-london-a09416394">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    linkedin.com/in/dev-london-a09416394
+                </a>
+            </div>
+        </header>
+
+        <div class="grid">
+            <div class="left">
+                <section>
+                    <h3>Profile</h3>
+                    <p class="profile-p">Results-driven Full-Stack Developer specializing in the MERN stack (MongoDB, Express, React, Node.js). Passionate about combining clean, efficient code with innovative Artificial Intelligence and Machine Learning solutions to solve complex problems.</p>
+                </section>
+
+                <section>
+                    <h3>Core Expertise</h3>
+                    <div class="skill-group">
+                        <h4>Web Technologies</h4>
+                        <p>React, Next.js, Node.js, Express, Tailwind CSS, Framer Motion, HTML5, SCSS</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>AI & Data Science</h4>
+                        <p>Python, Pandas, NumPy, Scikit-Learn, TensorFlow (Basics), Predictive Analytics</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Tools & Databases</h4>
+                        <p>MongoDB, PostgreSQL, Git/GitHub, Docker, Vercel, Firebase</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Selected Projects</h3>
+                    <div class="exp-item">
+                        <h4>NexGen E-Commerce Platform</h4>
+                        <div class="date">Full-Stack Development</div>
+                        <p class="desc">Engineered a scalable commerce solution with real-time analytics, secure payment integration, and a mobile-first responsive design.</p>
+                    </div>
+                    <div class="exp-item">
+                        <h4>AI TaskMaster</h4>
+                        <div class="date">AI/ML Integration</div>
+                        <p class="desc">Developed an intelligent task priority engine that uses machine learning to categorize and schedule tasks based on user behavior patterns.</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right">
+                <section>
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <h4>Bachelor of Technology (B.Tech)</h4>
+                        <p class="desc">Computer Science & Engineering</p>
+                        <div class="date">2022 - 2026</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Certifications</h3>
+                    <div class="edu-item">
+                        <h4>Meta Front-End Developer</h4>
+                        <p class="desc">Meta Professional Certificate</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Machine Learning</h4>
+                        <p class="desc">Stanford Online / Coursera</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Languages</h3>
+                    <p class="desc">English (Professional), Hindi (Native), Gujarati (Native)</p>
+                </section>
+
+                <section>
+                    <h3>Interests</h3>
+                    <p class="desc">Open Source, Cloud Architecture, Edge Computing, UX Design</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="portfolio-link">
+            This resume is an extension of my digital portfolio: 
+            <strong>https://devlondon47-spec.github.io/Portfolio-Website/</strong>
+        </div>
+    </div>
+</body>
+</html>

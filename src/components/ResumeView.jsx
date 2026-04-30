@@ -14,8 +14,8 @@ const ResumeView = ({ onClose }) => {
           <button onClick={onClose} className="btn btn-secondary back-btn">
             <ArrowLeft size={20} /> Back to Site
           </button>
-          <a href="./Ansh_Patel_Portfolio.pdf" download className="btn btn-primary download-btn">
-            <Download size={20} /> Download PDF
+          <a href="./Ansh_Patel_Resume.html" target="_blank" className="btn btn-primary download-btn">
+            <Download size={20} /> Save as PDF
           </a>
         </div>
       </div>
